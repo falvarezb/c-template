@@ -38,10 +38,10 @@ $(OBJS_PROD): | ${OUTPUT_DIRS}
 
 #### run unit tests using cmocka library  ######
 # run unit tests defined in unittest.c
-unittest: $(BUILD_DIR)/unittest
+unittest: $(BUILD_DIR)/myfile_test
 	$(VALGRIND) ./$^
 
-$(BUILD_DIR)/unittest: $(OBJS_PROD) ${BUILD_DIR}/unittest.o
+$(BUILD_DIR)/myfile_test: $(OBJS_PROD) ${BUILD_DIR}/myfile_test.o
 	$(LINK.c) $^ -o $@ $(LDLIBS) -lcmocka
 
 #### run individual module  ######
@@ -50,7 +50,7 @@ $(BUILD_DIR)/unittest: $(OBJS_PROD) ${BUILD_DIR}/unittest.o
 myfile: $(BUILD_DIR)/myfile
 	$(VALGRIND) ./$^
 
-$(BUILD_DIR)/myfile: $(OBJS_PROD) ${BUILD_DIR}/myfile.o
+$(BUILD_DIR)/myfile: $(OBJS_PROD)
 	$(LINK.c) $^ -o $@ $(LDLIBS)
 
 
