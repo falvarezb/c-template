@@ -48,7 +48,7 @@
                 "-DFAB_MAIN",
                 "${file}",                       
                 "-o",
-                "${fileDirname}/out/${fileBasenameNoExtension}"
+                "${fileDirname}/out/${fileBasenameNoExtension}.o"
             ],
             "options": {
                 "cwd": "${fileDirname}"
