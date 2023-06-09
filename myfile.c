@@ -2,12 +2,12 @@
 #include <stdio.h>
 #include "myfile.h"
 
-char* hello_world() {
+char* hello_world(void) {
     return "hello world";
 }
 
 #ifdef FAB_MAIN
 int main(int argc, char const *argv[]) {
-    printf(hello_world());
+    puts(hello_world());
 }
 #endif

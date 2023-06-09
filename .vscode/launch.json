@@ -5,56 +5,30 @@
     "version": "0.2.0",
     "configurations": [        
         {
-            "name": "gcc macos - build and debug active file",
+            "name": "macos - run program",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/out/${fileBasenameNoExtension}",
+            "program": "${workspaceFolder}/out/myprogram",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "C/C++ macos: build program"
+        },
+        {
+            "name": "macos - run test",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/out/test",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "lldb",
-            "preLaunchTask": "C/C++ macos: gcc build"
-        },
-        {
-            "name": "gcc linux - build and debug active file",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${fileDirname}/out/${fileBasenameNoExtension}",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "preLaunchTask": "C/C++ linux: gcc build"
-        },
-        {
-            "name": "gcc macos - test",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/out/test.out",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "preLaunchTask": "C/C++ macos: test"
-        },
-        {
-            "name": "gcc linux - test",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/out/test.out",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "preLaunchTask": "C/C++ linux: test"
+            "preLaunchTask": "C/C++ macos: build tests"
         }
     ]
 }

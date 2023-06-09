@@ -1,2 +1,2 @@
 
-char* hello_world();
+char* hello_world(void);
